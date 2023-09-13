@@ -32,8 +32,8 @@ class RunText(SampleBase):
 
 # Main function
 if __name__ == "__main__":
-    path = os.getcwd()
-    print "Path is " + path
+    path = "Path is"
+    path += os.getcwd()
     run_text = RunText()
     if (not run_text.process()):
         print ("WTAF")
