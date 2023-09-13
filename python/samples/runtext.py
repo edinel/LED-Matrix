@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # Display a runtext with double-buffering.
+import os
 from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
@@ -31,6 +32,8 @@ class RunText(SampleBase):
 
 # Main function
 if __name__ == "__main__":
+    path = os.getcwd()
+    print "Path is " + path
     run_text = RunText()
     if (not run_text.process()):
         print ("WTAF")
