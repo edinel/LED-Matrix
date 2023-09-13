@@ -37,5 +37,5 @@ if __name__ == "__main__":
     print (path)
 #    run_text = RunText()
 #    if (not run_text.process()):
-        print ("WTAF")
+    print ("WTAF")
 #        run_text.print_help()
