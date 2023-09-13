@@ -35,7 +35,7 @@ if __name__ == "__main__":
     path = "Path is"
     path += os.getcwd()
     print (path)
-    run_text = RunText()
-    if (not run_text.process()):
+#    run_text = RunText()
+#    if (not run_text.process()):
         print ("WTAF")
-        run_text.print_help()
+#        run_text.print_help()
