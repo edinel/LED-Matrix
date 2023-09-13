@@ -33,4 +33,5 @@ class RunText(SampleBase):
 if __name__ == "__main__":
     run_text = RunText()
     if (not run_text.process()):
+        print ("WTAF")
         run_text.print_help()
