@@ -9,7 +9,7 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
 class SampleBase(object):
     def __init__(self, *args, **kwargs):
-        self.parser = argparse.ArgumentParser()
+        
 
         self.parser.add_argument("-r", "--led-rows", action="store", help="Display rows. 16 for 16x32, 32 for 32x32. Default: 64", default=64, type=int)
         self.parser.add_argument("--led-cols", action="store", help="Panel columns. Typically 32 or 64. (Default: 64)", default=64, type=int)
@@ -29,9 +29,8 @@ class SampleBase(object):
         self.parser.add_argument("--led-multiplexing", action="store", help="Multiplexing type: 0=direct; 1=strip; 2=checker; 3=spiral; 4=ZStripe; 5=ZnMirrorZStripe; 6=coreman; 7=Kaler2Scan; 8=ZStripeUneven... (Default: 0)", default=0, type=int)
         self.parser.add_argument("--led-panel-type", action="store", help="Needed to initialize special panels. Supported: 'FM6126A'", default="", type=str)
         self.parser.add_argument("--led-no-drop-privs", dest="drop_privileges", help="Don't drop privileges from 'root' after initializing the hardware.", action='store_false')
+        self.parser.add_argument("--font", dest="font", help="font to use", action="store", default="7x13", type=str)
         self.parser.set_defaults(drop_privileges=True)
-        the_Text = "asdflkaj"
-        print (the_Text)
 
 
     def usleep(self, value):
@@ -40,9 +39,11 @@ class SampleBase(object):
     def run(self):
         print("Running")
 
+#This next bit is basically "Main" fior all intents and purposes it seems to me.
     def process(self):
         self.args = self.parser.parse_args()
-
+        
+        print (self.args.font)
         options = RGBMatrixOptions()
 
         if self.args.led_gpio_mapping != None:
