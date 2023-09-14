@@ -5,6 +5,8 @@ from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
 
+fontpath = "/home/edine/source/led-matrix/fonts"
+        
 
 class RunText(SampleBase):
     def __init__(self, *args, **kwargs):
@@ -16,8 +18,10 @@ class RunText(SampleBase):
     def run(self):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
         font = graphics.Font()
-        print (self.args.font)
-        font.LoadFont("/home/edinel/source/led-matrix/fonts/7x13.bdf")
+        #print (self.args.font)
+        fullpath = fontpath+self.args.font
+        print (fullpath)
+        font.LoadFont(fullpath)
         #print (options("-r"))
         textColor = graphics.Color(255, 255, 0)
         pos = offscreen_canvas.width
