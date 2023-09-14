@@ -5,7 +5,7 @@ from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
 
-fontpath = "/home/edinel/source/led-matrix/fonts/"
+fontdir = "/home/edinel/source/led-matrix/fonts/"
         
 
 class RunText(SampleBase):
@@ -19,9 +19,9 @@ class RunText(SampleBase):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
         font = graphics.Font()
         #print (self.args.font)
-        fullpath = fontpath+self.args.font
-        print (fullpath)
-        font.LoadFont(fullpath)
+        fontpath = fontdir+self.args.font
+        print (fontpath)
+        font.LoadFont(fontpath)
         #print (options("-r"))
         textColor = graphics.Color(255, 255, 0)
         pos = offscreen_canvas.width
