@@ -5,7 +5,7 @@ from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
 
-fontpath = "/home/edine/source/led-matrix/fonts/"
+fontpath = "/home/edinel/source/led-matrix/fonts/"
         
 
 class RunText(SampleBase):
