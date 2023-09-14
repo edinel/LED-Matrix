@@ -16,6 +16,7 @@ class RunText(SampleBase):
     def run(self):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
         font = graphics.Font()
+        print (self.args.font)
         font.LoadFont("/home/edinel/source/led-matrix/fonts/7x13.bdf")
         #print (options("-r"))
         textColor = graphics.Color(255, 255, 0)

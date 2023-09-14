@@ -45,7 +45,7 @@ class SampleBase(object):
         #vars (self.args)
 
         options = RGBMatrixOptions()
-        print (self.args.font)
+   #     print (self.args.font)
 
         if self.args.led_gpio_mapping != None:
           options.hardware_mapping = self.args.led_gpio_mapping
