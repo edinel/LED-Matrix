@@ -41,21 +41,16 @@ class RunText(SampleBase):
             x_pos += x_move
             y_pos +=y_move
             
-            if ((x_pos + len >= offscreen_canvas.width) and (x_move>0)):
-                print ("right") 
+            if ((x_pos + len >= offscreen_canvas.width) and (x_move>0)): 
                 x_move = -x_move
                 textColor = reset_color(self)   
             elif ((x_pos + x_move <= 0) and (x_move < 0)):
-                print ("left")
                 x_move = -x_move
                 textColor = reset_color(self)                   
             if ((y_pos - font.height + height_correction <= 0) and (y_move < 0)):
-                print ("top")
                 y_move = -y_move
                 textColor = reset_color(self)   
-
             elif ((y_pos + y_move >= offscreen_canvas.height) and (y_move > 0)):
-                print ("bottom")
                 y_move = -y_move
                 textColor = reset_color(self)
             #textColor = graphics.Color(red_val, green_val, blue_val)
