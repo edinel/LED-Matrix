@@ -58,7 +58,7 @@ class RunText(SampleBase):
                 print ("bottom")
                 y_move = -y_move
                 textColor = reset_color(self)
-            textColor = graphics.Color(red_val, green_val, blue_val)
+            #textColor = graphics.Color(red_val, green_val, blue_val)
             time.sleep(0.05)
             offscreen_canvas = self.matrix.SwapOnVSync(offscreen_canvas)
 
