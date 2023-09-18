@@ -24,20 +24,32 @@ class RunText(SampleBase):
         font.LoadFont(fontpath)
         print (font.height)
         textColor = graphics.Color(128, 255, 128)
-        pos = offscreen_canvas.width
+        x_pos = offscreen_canvas.width
+        y_pos = font.height
         my_text = self.args.text
-        move = -1
+        x_move = -1
+        y_move = -1
 
         while True:
             offscreen_canvas.Clear()
-            len = graphics.DrawText(offscreen_canvas, font, pos, font.height, textColor, my_text,)
-            pos += move
-            if ((pos + len == offscreen_canvas.width) and (move>0)):
+            len = graphics.DrawText(offscreen_canvas, font, x_pos, y_pos, textColor, my_text,)
+            x_pos += x_move
+            y_pos +=y_move
+
+            if ((x_pos + len == offscreen_canvas.width) and (x_move>0)):
                 print ("right side") 
-                move = -move
-            elif ((pos + move == 0) and (move < 0)):
+                x_move = -x_move
+            elif ((x_pos + x_move == 0) and (x_move < 0)):
                 print ("left side")
-                move = -move
+                x_move = -x_move
+            if ((y_pos + font.height == offscreen_canvas.height) and (y_move>0)):
+                print ("bottom")
+                y_move = -y_move
+            elif ((y_pos + y_move == 0) and (y_move < 0)):
+                print ("top")
+                y_move = -y_move
+
+
             time.sleep(0.05)
             offscreen_canvas = self.matrix.SwapOnVSync(offscreen_canvas)
 
