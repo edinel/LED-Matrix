@@ -52,7 +52,7 @@ class RunText(SampleBase):
                 y_move = -y_move
 
 
-            time.sleep(0.15)
+            time.sleep(0.05)
             offscreen_canvas = self.matrix.SwapOnVSync(offscreen_canvas)
 
 
