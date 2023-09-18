@@ -22,6 +22,8 @@ class RunText(SampleBase):
         red_val = 128
         green_val = 128
         blue_val = 128 
+        textColor = graphics.Color(red_val, green_val, blue_val)
+
         fontpath = fontdir+self.args.font
         print (fontpath)
         font.LoadFont(fontpath)
@@ -67,8 +69,8 @@ def reset_color(self):
     new_red_val = random_gen.randrange(0,255,1)
     new_green_val = random_gen.randrange(0,255,1)
     new_blue_val = random_gen.randrange(0,255,1)
-    textColor = graphics.Color(new_red_val, new_green_val, new_blue_val)
-    return textColor
+    l_textColor = graphics.Color(new_red_val, new_green_val, new_blue_val)
+    return l_textColor
 
 
 # Main function
