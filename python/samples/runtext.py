@@ -37,15 +37,15 @@ class RunText(SampleBase):
             y_pos +=y_move
 
             if ((x_pos + len == offscreen_canvas.width) and (x_move>0)):
-                print ("right side") 
+                print ("right") 
                 x_move = -x_move
             elif ((x_pos + x_move == 0) and (x_move < 0)):
-                print ("left side")
+                print ("left")
                 x_move = -x_move
             if ((y_pos + font.height == offscreen_canvas.height) and (y_move>0)):
                 print ("bottom")
                 y_move = -y_move
-            elif ((y_pos + y_move == 0) and (y_move < 0)):
+            elif ((y_pos + font.height + y_move == 0) and (y_move < 0)):
                 print ("top")
                 y_move = -y_move
 
