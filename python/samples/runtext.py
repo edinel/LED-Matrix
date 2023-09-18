@@ -42,10 +42,10 @@ class RunText(SampleBase):
             elif ((x_pos + x_move == 0) and (x_move < 0)):
                 print ("left")
                 x_move = -x_move
-            if ((y_pos + font.height == offscreen_canvas.height) and (y_move>0)):
+            if ((y_pos - font.height == offscreen_canvas.height) and (y_move>0)):
                 print ("bottom")
                 y_move = -y_move
-            elif ((y_pos + font.height + y_move == 0) and (y_move < 0)):
+            elif ((y_pos + y_move == 0) and (y_move < 0)):
                 print ("top")
                 y_move = -y_move
 
