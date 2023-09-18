@@ -44,7 +44,7 @@ class RunText(SampleBase):
                 x_move = -x_move
 
                 
-            if ((y_pos - font.height <= 0) and (y_move < 0)):
+            if ((y_pos - font.height - 3 <= 0) and (y_move < 0)):
                 print ("top")
                 y_move = -y_move
             elif ((y_pos + y_move >= offscreen_canvas.height) and (y_move > 0)):
