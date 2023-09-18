@@ -65,10 +65,10 @@ class RunText(SampleBase):
 
 
 def reset_color(self):
-    random_gen = random()
-    new_red_val = random_gen.randrange(0,255,1)
-    new_green_val = random_gen.randrange(0,255,1)
-    new_blue_val = random_gen.randrange(0,255,1)
+    random.seed ()
+    new_red_val = random.randrange(0,255,1)
+    new_green_val = random.randrange(0,255,1)
+    new_blue_val = random.randrange(0,255,1)
     l_textColor = graphics.Color(new_red_val, new_green_val, new_blue_val)
     return l_textColor
 
