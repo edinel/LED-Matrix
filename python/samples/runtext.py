@@ -32,7 +32,7 @@ class RunText(SampleBase):
 
         while True:
             offscreen_canvas.Clear()
-            len = graphics.DrawText(offscreen_canvas, font, 1, 1, textColor, my_text,)
+            len = graphics.DrawText(offscreen_canvas, font, x_pos, 64, textColor, my_text,)
             x_pos += x_move
             y_pos +=y_move
 
@@ -43,7 +43,7 @@ class RunText(SampleBase):
                 print ("left")
                 x_move = -x_move
 
-
+                
             if ((y_pos - font.height == 0) and (y_move < 0)):
                 print ("top")
                 y_move = -y_move
