@@ -32,10 +32,10 @@ class RunText(SampleBase):
             offscreen_canvas.Clear()
             len = graphics.DrawText(offscreen_canvas, font, pos, font.height, textColor, my_text,)
             pos += move
-            if (pos + len == offscreen_canvas.width):
+            if ((pos + len == offscreen_canvas.width) and (move>0)):
                 print ("right side") 
                 move = -move
-            elif (pos + move == 0):
+            elif ((pos + move == 0) and (move < 0)):
                 print ("left side")
                 move = -move
             time.sleep(0.05)
