@@ -33,7 +33,7 @@ class RunText(SampleBase):
         my_text = self.args.text
         x_move = -1
         y_move = -1
-        height_correction = 5
+        height_correction = 7
     
         while True:
             offscreen_canvas.Clear()
